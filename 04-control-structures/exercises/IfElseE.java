@@ -46,13 +46,53 @@ public class IfElseE
 
         // -------------------- Student Exercises --------------------
         // 1. Check if x is even or odd.
+        int x = 10;
+        if (x % 2 == 0) {
+            System.out.println(x + " is even.");
+        } else {
+            System.out.println(x + " is odd.");
+        }
 
         // 2. Check age and print "Adult" or "Minor".
+         int age = 16;  
+        if (age >= 18) {
+            System.out.println("Adult");
+        } else {
+            System.out.println("Minor");
+        }
+    
 
         // 3. Assign grades based on score using if-else if-else.
+        int score = 80; 
+
+        if (score >= 90) {
+            System.out.println("Grade: A");
+        } else if (score >= 75) {
+            System.out.println("Grade: B");
+        } else if (score >= 50) {
+            System.out.println("Grade: C");
+        } else {
+            System.out.println("Grade: F");
+        }
 
         // 4. Check temperature and print "Hot", "Warm", or "Cold".
+        double temperature = 25.5; 
+        if (temperature > 30) {
+            System.out.println("Hot");
+        } else if (temperature >= 20) {
+            System.out.println("Warm");
+        } else {
+            System.out.println("Cold");
+        }
 
         // 5. Check if n is positive AND even using logical operators.
+             int n = 11; 
+
+        if (n > 0 && n % 2 == 0) {
+            System.out.println(n + " is positive and even.");
+        } else {
+            System.out.println(n + " does not satisfy both conditions.");
+        }
     }
+
 }
