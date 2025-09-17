@@ -31,42 +31,70 @@ public class ComparisonE
         int x = 10;
         int y = 20;
 
-        // Equal to
+        // Existing examples
         boolean isEqual = (x == y);
-        System.out.println("Is Equal: " + isEqual); // Output: Is Equal: false
+        System.out.println("Is Equal: " + isEqual);
 
-        // Not equal to
         boolean isNotEqual = (x != y);
-        System.out.println("Is Not Equal: " + isNotEqual); // Output: Is Not Equal: true
+        System.out.println("Is Not Equal: " + isNotEqual);
 
-        // Greater than
         boolean isGreater = (x > y);
-        System.out.println("Is Greater: " + isGreater); // Output: Is Greater: false
+        System.out.println("Is Greater: " + isGreater);
 
-        // Less than
         boolean isLess = (x < y);
-        System.out.println("Is Less: " + isLess); // Output: Is Less: true
+        System.out.println("Is Less: " + isLess);
 
-        // Greater than or equal to
         boolean isGreaterOrEqual = (x >= y);
-        System.out.println("Is Greater or Equal: " + isGreaterOrEqual); // Output: Is Greater or Equal: false
+        System.out.println("Is Greater or Equal: " + isGreaterOrEqual);
 
-        // Less than or equal to
         boolean isLessOrEqual = (x <= y);
-        System.out.println("Is Less or Equal: " + isLessOrEqual); // Output: Is Less or Equal: true
+        System.out.println("Is Less or Equal: " + isLessOrEqual);
 
 
         // -------------------- Student Exercises --------------------
-        // 1. Create int a = 50, b = 25 and compare them.
 
-        // 2. Create double p = 5.5, q = 7.2 and compare them.
+        // 1. int a = 50, b = 25
+        int a = 50;
+        int b = 25;
+        System.out.println("\n1. Comparisons for a = 50, b = 25:");
+        System.out.println("a == b: " + (a == b));
+        System.out.println("a > b: " + (a > b));
+        System.out.println("a <= b: " + (a <= b));
 
-        // 3. Create char c1 = 'A', c2 = 'B' and check if c1 < c2.
+        // 2. double p = 5.5, q = 7.2
+        double p = 5.5;
+        double q = 7.2;
+        System.out.println("\n2. Comparisons for p = 5.5, q = 7.2:");
+        System.out.println("p > q: " + (p > q));
+        System.out.println("p < q: " + (p < q));
+        System.out.println("p == q: " + (p == q));
 
-        // 4. Check if (x < y) AND (x != y).
+        // 3. char c1 = 'A', c2 = 'B'
+        char c1 = 'A';
+        char c2 = 'B';
+        System.out.println("\n3. Comparison for c1 = 'A', c2 = 'B':");
+        System.out.println("c1 < c2: " + (c1 < c2)); // uses ASCII values
 
-        // 5. Compare two Strings using .equals() instead of ==.
+        // 4. Boolean expression: (x < y) AND (x != y)
+        boolean check = (x < y) && (x != y);
+        System.out.println("\n4. (x < y) AND (x != y): " + check);
 
-        // 6. Create three int variables and determine the largest.
+        // 5. Compare Strings using .equals()
+        String str1 = "Hello";
+        String str2 = "World";
+        System.out.println("\n5. String comparison using .equals():");
+        System.out.println("str1.equals(str2): " + str1.equals(str2));
+        System.out.println("Note: Using == compares references, not content.");
+
+        // 6. Find the largest of three ints
+        int n1 = 12, n2 = 45, n3 = 30;
+        int largest = n1; // assume n1 is largest
+        if(n2 > largest) {
+            largest = n2;
+        }
+        if(n3 > largest) {
+            largest = n3;
+        }
+        System.out.println("\n6. Largest of n1 = 12, n2 = 45, n3 = 30: " + largest);
     }
 }

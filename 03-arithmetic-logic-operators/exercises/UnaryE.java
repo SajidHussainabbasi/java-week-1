@@ -43,14 +43,37 @@ public class UnaryE
         System.out.println("Incremented x: " + x);
         System.out.println("Decremented y: " + y);
 
-
         // -------------------- Student Exercises --------------------
-        // 1. Create int num = 8; apply unary minus and plus.
 
-        // 2. Create boolean isOpen = false; invert it with !.
+        // 1. Unary minus and plus
+        int num = 8;
+        System.out.println("\n1. Unary operations on num = " + num);
+        System.out.println("Unary minus: " + (-num)); // -8
+        System.out.println("Unary plus: " + (+num));  // 8
 
-        // 3. Create int counter = 0; use pre-increment and post-increment.
+        // 2. Logical NOT
+        boolean isOpen = false;
+        System.out.println("\n2. Logical NOT on isOpen = " + isOpen);
+        System.out.println("Inverted: " + (!isOpen)); // true
 
-        // 4. Create int count = 5; use pre-
+        // 3. Pre-increment and post-increment
+        int counter = 0;
+        System.out.println("\n3. Counter operations:");
+        System.out.println("Pre-increment (++counter): " + (++counter)); // 1
+        System.out.println("Post-increment (counter++): " + (counter++)); // 1, then counter becomes 2
+        System.out.println("Counter after post-increment: " + counter); // 2
+
+        // 4. Pre-decrement and post-decrement
+        int count = 5;
+        System.out.println("\n4. Count operations:");
+        System.out.println("Pre-decrement (--count): " + (--count)); // 4
+        System.out.println("Post-decrement (count--): " + (count--)); // 4, then count becomes 3
+        System.out.println("Count after post-decrement: " + count); // 3
+
+        // 5. Combine unary operators with arithmetic
+        int x2 = 10;
+        int y2 = -x2 + ++x2; // -10 + 11 = 1
+        System.out.println("\n5. Combined unary operators:");
+        System.out.println("x2 = 10; y2 = -x2 + ++x2 => y2: " + y2);
     }
 }

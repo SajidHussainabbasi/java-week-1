@@ -49,16 +49,49 @@ public class AssignmentE
 
 
         // -------------------- Student Exercises --------------------
-        // 1. Create an int variable b = 20 and use +=, -= with it.
 
-        // 2. Create an int variable c = 15 and use *=, /= with it.
+        // 1. Variable b
+        int b = 20;
+        b += 10; // Add 10
+        System.out.println("b after += 10: " + b);
+        b -= 5;  // Subtract 5
+        System.out.println("b after -= 5: " + b);
 
-        // 3. Use %= with c to find remainder when divided by 4.
+        // 2. Variable c
+        int c = 15;
+        c *= 3; // Multiply by 3
+        System.out.println("c after *= 3: " + c);
+        c /= 2; // Divide by 2
+        System.out.println("c after /= 2: " + c);
 
-        // 4. Create a double variable d = 12.5, then use += and *=.
+        // 3. Use %= with c
+        c %= 4;
+        System.out.println("c after %= 4: " + c);
 
-        // 5. Create x = 7, double it with +=, then square it with *=.
+        // 4. Double variable d
+        double d = 12.5;
+        d += 7.5; // Add 7.5
+        System.out.println("d after += 7.5: " + d);
+        d *= 2;   // Multiply by 2
+        System.out.println("d after *= 2: " + d);
 
-        // 6. Start y = 50, apply -= 10, *= 2, /= 5, %= 6 step by step.
+        // 5. Variable x
+        int x = 7;
+        x += x;   // Double value
+        System.out.println("x after += x: " + x);
+        x *= x;   // Square value
+        System.out.println("x after *= x: " + x);
+
+        // 6. Sequence with y
+        int y = 50;
+        System.out.println("Initial y: " + y);
+        y -= 10;
+        System.out.println("y after -= 10: " + y);
+        y *= 2;
+        System.out.println("y after *= 2: " + y);
+        y /= 5;
+        System.out.println("y after /= 5: " + y);
+        y %= 6;
+        System.out.println("y after %= 6: " + y);
     }
 }

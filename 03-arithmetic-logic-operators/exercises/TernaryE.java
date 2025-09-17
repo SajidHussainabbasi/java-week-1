@@ -25,20 +25,38 @@ public class TernaryE
         int a = 10;
         int b = 20;
 
-        // Using the ternary operator to find the maximum of two numbers
+        // Example: maximum of two numbers
         int max = (a > b) ? a : b;
         System.out.println("The maximum value is: " + max);
 
 
         // -------------------- Student Exercises --------------------
-        // 1. Create int x = 15, y = 25; use ternary to find minimum.
 
-        // 2. Create int age = 18; use ternary to print "Adult" or "Minor".
+        // 1. Find minimum of x = 15, y = 25
+        int x = 15;
+        int y = 25;
+        int min = (x < y) ? x : y;
+        System.out.println("1. Minimum of x and y: " + min);
 
-        // 3. Create int a = 10, b = 20, c = 15; use nested ternary to find largest.
+        // 2. Check age
+        int age = 18;
+        String status = (age >= 18) ? "Adult" : "Minor";
+        System.out.println("2. Age " + age + ": " + status);
 
-        // 4. Create boolean isRaining = true; use ternary to print umbrella advice.
+        // 3. Largest of three numbers using nested ternary
+        int num1 = 10, num2 = 20, num3 = 15;
+        int largest = (num1 > num2) ? ((num1 > num3) ? num1 : num3) 
+                                     : ((num2 > num3) ? num2 : num3);
+        System.out.println("3. Largest of num1, num2, num3: " + largest);
 
-        // 5. Check if n = 7 is even or odd using ternary and print.
+        // 4. Umbrella advice
+        boolean isRaining = true;
+        String advice = isRaining ? "Take an umbrella" : "No umbrella needed";
+        System.out.println("4. Weather advice: " + advice);
+
+        // 5. Check if n = 7 is even or odd
+        int n = 7;
+        String evenOdd = (n % 2 == 0) ? "Even" : "Odd";
+        System.out.println("5. Number " + n + " is " + evenOdd);
     }
 }

@@ -46,15 +46,35 @@ public class LogicalE
 
 
         // -------------------- Student Exercises --------------------
-        // 1. Create boolean x = true, y = false and test &&, ||, ! operators.
 
-        // 2. Create a = true, b = false, c = true; evaluate:
-        //    (a && b) || c and !(a || b) && c
+        // 1. Boolean x and y
+        boolean x = true;
+        boolean y = false;
+        System.out.println("\n1. Boolean x = true, y = false:");
+        System.out.println("x && y = " + (x && y));  // false
+        System.out.println("x || y = " + (x || y));  // true
+        System.out.println("!x = " + (!x));          // false
+        System.out.println("!y = " + (!y));          // true
 
-        // 3. Create int n = 15; check if n > 10 && n < 20,
-        //    and n != 12 || n < 5.
+        // 2. a = true, b = false, c = true
+        boolean c = true;
+        System.out.println("\n2. Logical expressions with a, b, c:");
+        System.out.println("(a && b) || c = " + ((a && b) || c));       // true
+        System.out.println("!(a || b) && c = " + (!(a || b) && c));     // false
 
-        // 4. Combine multiple logical operators with parentheses
-        //    to test order of evaluation.
+        // 3. n = 15
+        int n = 15;
+        System.out.println("\n3. Number n = 15 conditions:");
+        System.out.println("n > 10 && n < 20: " + (n > 10 && n < 20)); // true
+        System.out.println("n != 12 || n < 5: " + (n != 12 || n < 5)); // true
+
+        // 4. Combined logical operators with parentheses
+        System.out.println("\n4. Combined logical expressions:");
+        boolean result1 = (x || y) && (a && !b);  // true
+        boolean result2 = !(x && a) || (b || c);  // true
+        boolean result3 = ((n > 10 && n < 20) || (n == 15 && x)) && !y; // true
+        System.out.println("(x || y) && (a && !b) = " + result1);
+        System.out.println("!(x && a) || (b || c) = " + result2);
+        System.out.println("((n > 10 && n < 20) || (n == 15 && x)) && !y = " + result3);
     }
 }

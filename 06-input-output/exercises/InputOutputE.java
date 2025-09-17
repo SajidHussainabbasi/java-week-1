@@ -42,33 +42,57 @@ public class InputOutputE
 {
     public static void main(String[] args)
     {
-        // Output examples
+        Scanner scanner = new Scanner(System.in);
+
+        // ---------------- Output Examples ----------------
         System.out.print("This is printed without a newline. ");
         System.out.println("This is printed with a newline.");
         System.out.printf("Formatted number: %.2f%n", 123.456);
 
-        // Input examples
-        Scanner scanner = new Scanner(System.in);
+        // ---------------- Input Examples ----------------
+        // 1. Ask for first name and last name
+        System.out.print("\nEnter your first name: ");
+        String firstName = scanner.next();
+        System.out.print("Enter your last name: ");
+        String lastName = scanner.next();
+        System.out.println("Hello, " + firstName + " " + lastName + "!");
 
-        // 1. Reading a full line
-        System.out.print("Enter a line of text: ");
-        String line = scanner.nextLine();
-        System.out.println("You entered: " + line);
+        // 2. Ask for two integers and print sum, difference, product, quotient
+        System.out.print("\nEnter first integer: ");
+        int int1 = scanner.nextInt();
+        System.out.print("Enter second integer: ");
+        int int2 = scanner.nextInt();
+        System.out.printf("Sum: %d, Difference: %d, Product: %d, Quotient: %.2f%n",
+                          int1 + int2, int1 - int2, int1 * int2, (int2 != 0 ? (double)int1 / int2 : 0));
 
-        // 2. Reading an integer
-        System.out.print("Enter an integer: ");
-        int number = scanner.nextInt();
-        System.out.println("You entered: " + number);
+        // 3. Circle area and circumference
+        System.out.print("\nEnter the radius of a circle: ");
+        double radius = scanner.nextDouble();
+        double area = Math.PI * radius * radius;
+        double circumference = 2 * Math.PI * radius;
+        System.out.printf("Area: %.2f, Circumference: %.2f%n", area, circumference);
 
-        // 3. Reading a double
-        System.out.print("Enter a double: ");
-        double decimal = scanner.nextDouble();
-        System.out.println("You entered: " + decimal);
+        // 4. Determine age category
+        System.out.print("\nEnter your age: ");
+        int age = scanner.nextInt();
+        if (age < 13) {
+            System.out.println("You are a child.");
+        } else if (age <= 19) {
+            System.out.println("You are a teenager.");
+        } else {
+            System.out.println("You are an adult.");
+        }
 
-        // 4. Reading a single word
-        System.out.print("Enter a single word: ");
-        String word = scanner.next();
-        System.out.println("You entered: " + word);
+        // 5. Simple login simulation
+        System.out.print("\nEnter username: ");
+        String username = scanner.next();
+        System.out.print("Enter password: ");
+        String password = scanner.next();
+        if (username.equals("admin") && password.equals("1234")) {
+            System.out.println("Access granted.");
+        } else {
+            System.out.println("Access denied.");
+        }
 
         scanner.close();
     }
